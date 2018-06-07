@@ -11,19 +11,19 @@ import java.util.concurrent.Executors;
  * @create: 2018-06-05 23:00
  **/
 @Slf4j
-public class SyncExample01 {
+public class SyncExample02 {
 
-    //修饰代码块
-    public void test1() {
-        synchronized (this) {
+    //修饰一个类
+    public static void test1() {
+        synchronized (SyncExample02.class) {
             for (int i = 0; i < 10; i++) {
                 log.info("test1 ->: {}", i);
             }
         }
     }
 
-    //修饰方法
-    public synchronized void test2() {
+    //修饰静态方法
+    public static synchronized void test2() {
         for (int i = 0; i < 10; i++) {
             log.info("test2 ->:" + i);
         }
@@ -32,9 +32,12 @@ public class SyncExample01 {
     public static void main(String[] args) {
 
         ExecutorService executorService = Executors.newCachedThreadPool();
-        for (int i = 0; i < 10; i++) {
-            SyncExample01 syncExample01 = new SyncExample01();
-            executorService.submit(() -> syncExample01.test1());
+        for (int i = 0; i < 2; i++) {
+            if (i % 2 == 0) {
+                executorService.submit(() -> SyncExample02.test1());
+            } else {
+                executorService.submit(() -> SyncExample02.test2());
+            }
         }
         executorService.shutdown();
     }
