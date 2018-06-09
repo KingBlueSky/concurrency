@@ -38,3 +38,14 @@
 1. StirngBuilder和StringBuffr.
 2. SimpleDateFormat
 3. ArrayList,HashSet,HashMap和Collections
+
+### 线程安全的同步容器
+1. vector，stack等
+2. hashtable等
+3. collections.synchronizedXXX等创建的对象
+
+
+### 并发容器
+1. copyOnWriteArrayList
+2. copyOnWriteArraySet, concurrentSkipListSet
+3. concurrentHashMap, concurrentSkipListMap
