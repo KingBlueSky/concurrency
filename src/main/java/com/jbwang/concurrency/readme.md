@@ -49,3 +49,10 @@
 1. copyOnWriteArrayList
 2. copyOnWriteArraySet, concurrentSkipListSet
 3. concurrentHashMap, concurrentSkipListMap
+
+### 常用AQS组件
+1. countDownLatch
+2. semaphore
+3. cyclicBarrier
+4. reentrankLock
+5. 
