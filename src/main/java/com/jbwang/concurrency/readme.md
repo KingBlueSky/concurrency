@@ -33,3 +33,8 @@
 ### 线程封闭
 1. 堆栈封闭：即局部变量，不存在并发问题
 2. ThreadLocal封闭：不存在并发问题
+
+### 常用的线程安全与不安全类
+1. StirngBuilder和StringBuffr.
+2. SimpleDateFormat
+3. ArrayList,HashSet,HashMap和Collections

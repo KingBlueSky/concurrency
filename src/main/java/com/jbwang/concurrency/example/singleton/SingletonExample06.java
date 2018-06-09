@@ -4,7 +4,7 @@ import com.jbwang.concurrency.annoations.ThreadSafe;
 
 /**
  * @author: jbwang0106
- * @description: 饿汉式的单例模式
+ * @description: 懒汉式的单例模式
  * @create: 2018-06-07 22:07
  **/
 
